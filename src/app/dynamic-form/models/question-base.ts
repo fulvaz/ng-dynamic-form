@@ -10,15 +10,7 @@ export class QuestionBase<T> {
   validators = [];
   componentName?: string;
 
-  constructor(options: {
-      value?: T,
-      key?: string,
-      label?: string,
-      order?: number,
-      description?: string,
-      errMsg?: string,
-      validators?,
-    } = {}) {
+  constructor(options: QuestionBase<T>) {
     this.value = options.value;
     this.key = options.key || '';
     this.label = options.label || '';
@@ -26,6 +18,6 @@ export class QuestionBase<T> {
     this.description = options.description || '';
     this.validators = options.validators || [];
     this.errMsg = options.errMsg || '';
-    this.componentName = 'BaseInputComponent';
+    this.componentName = options.componentName || 'BaseInputComponent';
   }
 }

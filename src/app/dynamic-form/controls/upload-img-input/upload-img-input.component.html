@@ -6,6 +6,9 @@
       <div class="input-control-wrapper">
         <input type="button" [id]="question?.key" [value]="question?.btnContent" jui-btn (click)="question?.uploadHandler(form)">
         <label class="input-descibtion">{{question?.description}}</label>
+        <div class="img-preview-container">
+            <div *ngIf="!!form.get(question?.key).value" class="img-preview" [style.background-image]="form.get(question?.key).value"></div>
+        </div>
         <label class="err-msg" *ngIf="ifShowErr">
           {{question.errMsg}}
         </label>

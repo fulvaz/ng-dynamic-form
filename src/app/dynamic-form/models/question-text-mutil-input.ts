@@ -11,13 +11,11 @@ import { QuestionBase } from './question-base';
 //   validators: [Validators.min(1), Validators.max(5)],
 // })
 
-export class QuestionText<T> extends QuestionBase<T> {
+export class QuestionTextMutil<T> extends QuestionBase<T> {
   constructor(options) {
     super(options);
-    this.type = options.type || 'text';
-    this.placeholder = options.placeholder || '';
-    this.componentName = options.componentName || 'TextInputComponent';
+    this.componentName = options.componentName || 'TextMultiInputComponent';
+    this.questions = options.questions;
   }
-  public type;
-  public placeholder = '';
+  public questions: QuestionBase<T>[];
 }

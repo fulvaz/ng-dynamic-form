@@ -1,0 +1,10 @@
+@import "../../styles/index.scss";
+.textarea-input-container {
+    @include base-input-style();
+    .input-control {
+        width: 20em;
+        height: 5em;
+        resize: none;
+        border: 1px solid rgb(238, 238, 238);
+    }
+}

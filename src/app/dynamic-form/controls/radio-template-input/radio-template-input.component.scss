@@ -1,6 +1,6 @@
 @import "../../styles/index.scss";
 
-.radio-input-container {
+.radio-template-input-container {
   @include base-input-style();
   .radio-label {
     font-size: $default-font-size;

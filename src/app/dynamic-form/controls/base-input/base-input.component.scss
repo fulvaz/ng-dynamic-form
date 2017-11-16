@@ -1,5 +1,4 @@
-@import "../../../styles/index.scss";
-
+@import "../../styles/index.scss";
 .base-input-container {
-  @include base-input-style();
+    @include base-input-style();
 }

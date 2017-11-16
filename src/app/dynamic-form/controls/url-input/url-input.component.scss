@@ -1,0 +1,16 @@
+@import "../../styles/index.scss";
+.url-input-container {
+    @include base-input-style();
+    .input-url {
+        width: 126px;
+        transition: width 0.5s ease-out;
+
+        &:focus {
+          width: 750px;
+        }
+    }
+
+    .input-label-sub {
+      font-size: $default-font-size;
+    }
+}

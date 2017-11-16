@@ -26,6 +26,7 @@
         .err-msg {
             display: block;
             color: $invalid-color;
+            font-size: $default-desc-font-size;
         }
         input.ng-invalid:not(.ng-untouched) {
             border-color: $invalid-color;
@@ -36,7 +37,9 @@
         .input-descibtion {
           display: block;
           margin: 0.5rem 0;
+          margin-top: 0;
           font-size: $default-desc-font-size;
+          // line-height: ($default-desc-font-size + 10px);
       }
     }
 }

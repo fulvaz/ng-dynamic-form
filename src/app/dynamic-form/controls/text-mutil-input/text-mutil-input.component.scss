@@ -1,0 +1,23 @@
+@import "../../styles/index.scss";
+@mixin styleHack() {
+    .input-wrapper {
+        margin: 0 !important;
+        margin-right: 15px !important;
+    }
+    .input-label-wrapper {
+        margin-right: 10px !important;
+    }
+    .input-label-wrapper {
+        width: auto !important;
+    }
+}
+
+text-mutil-input {
+    .text-mutil-input-container {
+        @include base-input-style();
+        .multi-control-container {
+            display: flex;
+            @include styleHack();
+        }
+    }
+}
