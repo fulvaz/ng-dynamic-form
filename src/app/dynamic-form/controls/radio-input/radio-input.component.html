@@ -1,0 +1,17 @@
+<div class="radio-input-container" [formGroup]="form">
+    <div class="input-wrapper">
+        <div class="input-label-wrapper">
+            <label for="" class="input-label">{{question?.label}}</label>
+        </div>
+        <div class="input-control-wrapper">
+            <label *ngFor="let option of question?.radioOptions" class="radio-label"
+             [for]="option?.key">
+                <input type="radio" class="form-input"
+                  [id]="option?.key"
+                  [value]="option.value" [formControlName]="question.key"
+                  [checked]="option.checked">{{option?.label}}
+            </label>
+            <label class="input-descibtion">{{question?.description}}</label>
+        </div>
+    </div>
+</div>

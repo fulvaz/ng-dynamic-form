@@ -1,0 +1,63 @@
+@mixin centerContent1() {
+    .centered-container {
+        position: relative;
+        top: 50%;
+        .centered-content {
+            position: absolute;
+            top: -50%;
+        }
+    }
+}
+
+@mixin fullScreen() {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+@mixin fullViewport() {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+}
+
+@mixin modal($bg: rgba(0, 0, 0, 0)) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $bg;
+}
+
+@mixin centerOnlyElm() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bgDiv($w, $h) {
+    width: $w;
+    height: $h;
+    background-position: center;
+    background-size: cover;
+}
+
+@function px2rem($px) {
+    $design-width: 1080px;
+    @return $px / 3;
+}
+
+@mixin resetInput($border-color) {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+}

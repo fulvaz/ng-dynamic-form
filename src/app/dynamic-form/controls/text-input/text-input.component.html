@@ -1,0 +1,16 @@
+<div class="text-input-container" [formGroup]="form">
+  <div class="input-wrapper" >
+    <div class="input-label-wrapper">
+      <label [for]="question?.key" class="input-label">{{question?.label}}</label>
+    </div>
+    <div class="input-control-wrapper">
+      <input [type]="question?.type" class="input-control"
+        [formControlName]="question?.key" [placeholder]="question?.placeholder"
+        [id]="question?.key">
+      <label class="err-msg" *ngIf="ifShowErr">
+        {{question.errMsg}}
+      </label>
+      <label class="input-descibtion">{{question?.description}}</label>
+    </div>
+  </div>
+</div>

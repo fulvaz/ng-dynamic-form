@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { QuestionFormModule } from "./dynamic-form/question-form.module";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    QuestionFormModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

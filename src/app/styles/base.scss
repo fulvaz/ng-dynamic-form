@@ -1,0 +1,42 @@
+@import "./utils.scss";
+@import "./vars.scss";
+@mixin base-input-style() {
+    input[type="text"] {
+        padding: 0px 24px 0px 7px;
+        box-sizing: border-box;
+        @include resetInput($default-input-border-color);
+    }
+    input.ng-dirty.ng-valid {
+        border-color: $default-input-border-color;
+    }
+    .input-wrapper {
+        margin: 1.5rem 0;
+        display: flex;
+        .input-label-wrapper {
+            margin-right: 20px;
+            width: 150px;
+            text-align: right;
+            line-height: 30px;
+            font-size: $default-font-size;
+        }
+        .input-control-wrapper {
+            position: relative;
+            line-height: 30px;
+        }
+        .err-msg {
+            display: block;
+            color: $invalid-color;
+        }
+        input.ng-invalid:not(.ng-untouched) {
+            border-color: $invalid-color;
+        }
+        textarea.ng-invalid:not(.ng-untouched) {
+            border-color: $invalid-color;
+        }
+        .input-descibtion {
+          display: block;
+          margin: 0.5rem 0;
+          font-size: $default-desc-font-size;
+      }
+    }
+}
